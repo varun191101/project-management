@@ -43,7 +43,7 @@ const syncUserUpdation = inngest.createFunction(
         const { data } = event
         await prisma.user.update({
             where: {
-                id:data.id
+                id: data.id
             },
             data: {
                 email: data?.email_addresses[0]?.email_address,
